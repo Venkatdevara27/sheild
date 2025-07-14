@@ -60,7 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = async (email: string, password: string) => {
     // Mock authentication
     const user = mockUsers.find(u => u.email === email);
-    if (user && password === 'password') {
+    if (user && password === 'Venkat@123') {
       const updatedUser = { ...user, lastLogin: new Date() };
       localStorage.setItem('secureiot_user', JSON.stringify(updatedUser));
       setAuthState({
